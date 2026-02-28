@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: POINTMARKET - Motivational Engine API
+  description: Dokumentasi API untuk portal kuesioner psikometrik POINTMARKET.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8085
+    description: Local Server
+paths:
+  /api/results:
+    get:
+      summary: Mendapatkan semua data hasil kuesioner mahasiswa
+      description: Mengembalikan daftar mahasiswa yang sudah disetujui beserta hasil tes VARK, MSLQ, dan AMS.
+      responses:
+        '200':
+          description: Berhasil mengambil data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StudentResult'
+        '500':
+          description: Server Error
+
+components:
+  schemas:
+    StudentResult:
+      type: object
+      properties:
+        npm:
+          type: string
+          example: "24001"
+          description: Nomor Pokok Mahasiswa
+        nama:
+          type: string
+          example: "amin"
+          description: Nama Lengkap Mahasiswa
+        vark_type:
+          type: string
+          example: "V"
+          description: Tipe Gaya Belajar (Visual, Aural, Read/Write, Kinesthetic)
+        mslq_score:
+          type: number
+          format: float
+          example: 5.5
+          description: Skor rata-rata kuesioner MSLQ
+        ams_type:
+          type: string
+          example: "achievement"
+          description: Tipe Motivasi AMS (intrinsic, extrinsic, achievement, amotivation)
