@@ -29,4 +29,4 @@ Proyek ini menggunakan pola arsitektur MVC (Model-View-Controller) untuk memisah
 
 ## Penggunaan Terbatas
 
-Aplikasi ini merupakan bagian dari kegiatan riset internal. Penggunaan dan distribusi materi di dalamnya harus mengikuti protokol legal dan etika riset yang berlaku di Lab Riset PM.
+Aplikasi ini merupakan bagian dari riset M. Yusril Helmi Setyawan. Penggunaan dan distribusi materi di dalamnya harus mengikuti protokol legal dan etika riset yang berlaku di Lab Riset PM.
